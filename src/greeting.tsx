@@ -9,15 +9,20 @@ type NamePropsOptional = {
   middleName: string,
 }
 
-type NameProps = NamePropsRequired & Partial<NamePropsOptional>;
+type NameProps = NamePropsRequired & NamePropsOptional;
 
-class Greeting extends React.Component<NameProps, any> {
+class Greeting extends React.Component<NamePropsRequired & Partial<NamePropsOptional>, any> {
   static defaultProps: NamePropsOptional = {
     middleName: '-no-middle-name-'
   }
-  constructor(props: NamePropsRequired & NamePropsOptional) {
+  constructor(props: NameProps) {
     super(props);
   }
+
+  componentWillReceiveProps(props: NameProps) {
+
+  }
+
   render() {
     const { firstName, lastName, middleName } = this.props;
 
