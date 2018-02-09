@@ -3,6 +3,7 @@
     "target": "es6",
     "module": "es6",
     "moduleResolution": "node",
+    "strictNullChecks": true,
     "allowSyntheticDefaultImports": true,
     "jsx": "react",
     "sourceMap": true,
