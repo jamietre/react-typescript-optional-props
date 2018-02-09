@@ -15,7 +15,7 @@ class Greeting extends React.Component<NamePropsRequired & Partial<NamePropsOpti
   static defaultProps: NamePropsOptional = {
     middleName: '(no middle name)'
   }
-  constructor(props) {
+  constructor(props: NameProps) {
     super(props);
   }
 
