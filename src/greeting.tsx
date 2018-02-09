@@ -1,11 +1,11 @@
 declare let mountNode: any
 
-interface NamePropsRequired {
+type NamePropsRequired = {
   firstName: string;
   lastName: string;
 }
 
-interface NamePropsOptional {
+type NamePropsOptional = {
   middleName: string;
 }
 
