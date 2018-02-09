@@ -23,7 +23,9 @@ const Greeting: React.ComponentClass<NamePropsRequired & Partial<NamePropsOption
 
   render() {
     const { firstName, lastName, middleName } = this.props;
-    log(`${this.props.middleName} is not optional internally`);
+
+    log(middleName);
+    log(`is not optional internally`);
 
     return <div>Hello, {`${firstName} ${middleName} ${lastName}`}</div>
   }
