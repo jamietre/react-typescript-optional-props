@@ -5,4 +5,4 @@ An example of a pattern to strongly type optional props in Typescript
 Usage:
 
 $ npm install
-$ npm run gulp
+$ npm run build
