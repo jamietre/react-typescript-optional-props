@@ -13,6 +13,7 @@ type NameProps = NamePropsRequired & NamePropsOptional;
 
 const Greeting: React.ComponentClass<NamePropsRequired & Partial<NamePropsOptional>> =
   class extends React.Component<NameProps> {
+
   static defaultProps: NamePropsOptional = {
     middleName: "(no middle name)"
   }
