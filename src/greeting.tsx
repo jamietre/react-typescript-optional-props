@@ -1,24 +1,24 @@
 declare let mountNode: any
 
-type NamePropsRequired = {
+type GreetingRequiredProps = {
   firstName: string;
   lastName: string;
 }
 
-type NamePropsOptional = {
+type GreetingDefaultProps = {
   middleName: string;
 }
 
-type NameProps = NamePropsRequired & NamePropsOptional;
+type GreetingPropsWithDefaults = GreetingRequiredProps & GreetingDefaultProps;
 
-const Greeting: React.ComponentClass<NamePropsRequired & Partial<NamePropsOptional>> =
-  class extends React.Component<NameProps> {
+const Greeting: React.ComponentClass<GreetingRequiredProps & Partial<GreetingDefaultProps>> =
+  class extends React.Component<GreetingPropsWithDefaults> {
 
-  static defaultProps: NamePropsOptional = {
+  static defaultProps: GreetingDefaultProps = {
     middleName: "(no middle name)"
   }
 
-  constructor(props: NameProps) {
+  constructor(props: GreetingPropsWithDefaults) {
     super(props)
   }
 
